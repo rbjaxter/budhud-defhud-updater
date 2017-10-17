@@ -86,7 +86,6 @@ echo ///////////////////////////////////////////////////////////////
 copy /y "%default_tf2hud_folder%\resource\clientscheme.res" "%core_resource%\clientscheme_base.res"
 copy /y "%default_tf2hud_folder%\resource\sourcescheme.res" "%core_resource%\sourcescheme_base.res"
 copy /y "%default_tf2hud_folder%\resource\gamemenu.res" "%core_resource%\gamemenu_base.res"
-copy /y "%default_tf2hud_folder%\scripts\hudanimations_tf.txt" "%core_scripts%\hudanimations_tf.txt"
 
 echo Done.
 echo Thanks to JarateKing and Wiethoofd for tips with this!
