@@ -28,25 +28,24 @@ IF NOT EXIST "%default_tf2hud_folder%\scripts" (mkdir "%default_tf2hud_folder%\s
 #UpdateFiles\HLExtract.exe -p "..\..\tf2_misc_dir.vpk" -d "%default_tf2hud_folder%\scripts" -e "root\scripts\HudAnimations_tf.txt" -m -v -s
 
 echo ///////////////////////////////////////////////////////////////
-echo // (3/10) - Removing minmode and OS-dependent lines from basehud
+echo // (3/10) - Removing minmode, [$OSX], and [$X360] lines from basehud
 echo ///////////////////////////////////////////////////////////////
 
-#UpdateFiles\_Modifier.exe -i -r -c -- %default_tf2hud_folder%\* _minmode [disabled:_minmode]
-#UpdateFiles\_Modifier.exe -i -r -c -- %default_tf2hud_folder%\* [$OSX] [disabled:$OSX]
-#UpdateFiles\_Modifier.exe -i -r -c -- %default_tf2hud_folder%\* [$X360] [disabled:$X360]
-#UpdateFiles\_Modifier.exe -i -r -c -- %default_tf2hud_folder%\* [$LINUX] [disabled:$LINUX]
+#UpdateFiles\_Modifier.exe -i -r -c -- %default_tf2hud_folder%\* _minmode _disabled
+#UpdateFiles\_Modifier.exe -i -r -c -- %default_tf2hud_folder%\* [$OSX] [disabled]
+#UpdateFiles\_Modifier.exe -i -r -c -- %default_tf2hud_folder%\* [$X360] [disabled]
 
 echo ///////////////////////////////////////////////////////////////
 echo // (4/10) - Removing lodef and hidef lines from basehud
 echo ///////////////////////////////////////////////////////////////
 
-#UpdateFiles\_Modifier.exe -i -r -c -- %default_tf2hud_folder%\* _lodef [disabled:lodef_]
-#UpdateFiles\_Modifier.exe -i -r -c -- %default_tf2hud_folder%\* _hidef [disabled:hidef_]
+#UpdateFiles\_Modifier.exe -i -r -c -- %default_tf2hud_folder%\* _lodef _disabled
+#UpdateFiles\_Modifier.exe -i -r -c -- %default_tf2hud_folder%\* _hidef _disabled
 
 echo ///////////////////////////////////////////////
 echo // (5/10) - Removing if_ lines from basehud
 echo ///////////////////////////////////////////////
-#UpdateFiles\_Modifier.exe -i -r -c -- %default_tf2hud_folder%\* if_ [disabled:if_]
+#UpdateFiles\_Modifier.exe -i -r -c -- %default_tf2hud_folder%\* if_ disabled_
 
 echo ///////////////////////////////////////////////////////////////
 echo // (6/10) - Deleting unused folders and files
